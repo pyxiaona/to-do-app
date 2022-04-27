@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kanban-pod
+spec:
+  containers:
+    - name: kanban-pod
+      image: nananainfra1/kanban:v1
+      ports:
+        - containerPort: 80
+
+
