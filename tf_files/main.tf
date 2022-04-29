@@ -1,4 +1,14 @@
 terraform {
+  backend "s3" {
+    bucket = "rock-infrared-2022-kanba-nm-br-ag"
+    key="./tf_files/"
+    region = "us-east-1"
+  }
+}
+
+
+
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
