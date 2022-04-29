@@ -1,3 +1,4 @@
+
 terraform {
   backend "s3" {
     bucket = "rock-infrared-2022-kanba-nm-br-ag"
@@ -5,8 +6,6 @@ terraform {
     region = "us-east-1"
   }
 }
-
-
 
 terraform {
   required_providers {
@@ -46,5 +45,25 @@ locals {
 }
 
 
+/*
+terraform {
+  backend "s3" {
+    bucket = "rock-infrared-2022-kanban-roll"
+    key="./tf_files/"
+    region = "us-east-1"
+  }
+}
 
+resource "aws_s3_bucket" "rock-infrared-s3" {
+  bucket = "rock-infrared-2022-kanban-roll"
 
+  tags = {
+    Name        = "rock-infra-red-s3bucket"
+  }
+}
+
+resource "aws_s3_bucket_acl" "rock-infra-acl" {
+  bucket = aws_s3_bucket.rock-infrared-s3.id
+  acl    = "private"
+}
+*/

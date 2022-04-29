@@ -21,10 +21,10 @@ output "info_resources" {
   value = aws_eks_node_group.rock_node_group.resources
 }
 
-
+/*
 output "load_balancer_aws" {
   value = data.aws_elb.rock-elb
-}
+}*/
 output "load_balancer_info" {
   value = kubernetes_service.kanban-lb
 }

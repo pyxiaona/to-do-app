@@ -39,7 +39,7 @@ resource "kubernetes_service" "kanban-svc" {
     type = "NodePort"
     port {
       node_port   = 30015
-      port        = 3001
+      port        = 80
       target_port = 80
     }
   }
@@ -55,10 +55,9 @@ resource "kubernetes_service" "kanban-lb" {
     }
     #external_traffic_policy = "Local"
     port {
-      port        = 3001
+      port        = 80
       target_port = 80
     }
-    load_balancer_ip = "10.10.10.10"
     type = "LoadBalancer"
   }
 
@@ -66,7 +65,7 @@ resource "kubernetes_service" "kanban-lb" {
 
 
 
-
+/*
 # Create a local variable for the load balancer name.
 locals {
   lb_name = split("-", split(".", kubernetes_service.kanban-lb.status.0.load_balancer.0.ingress.0.hostname).0).0
@@ -75,6 +74,5 @@ locals {
 # Read information about the load balancer using the AWS provider.
 data "aws_elb" "rock-elb" {
   name = local.lb_name
-
-}
+}*/
 
