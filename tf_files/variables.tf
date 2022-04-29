@@ -13,7 +13,7 @@ variable "rules" {
     {
       port        = 80
       protocol    = "tcp"
-      cidr_blocks = ["5.146.192.101/32"]
+      cidr_blocks = ["0.0.0.0/0"]
     }
   ]
 }
@@ -29,12 +29,12 @@ variable "rules_nodes" {
     {
       port        = 443
       protocol    = "tcp"
-      cidr_blocks = ["5.146.192.101/32"]
+      cidr_blocks = ["0.0.0.0/0"]
     },
     {
       port        = 53
       protocol    = "tcp"
-      cidr_blocks = ["5.146.192.101/32"]
+      cidr_blocks = ["0.0.0.0/0"]
     }
   ]
 }

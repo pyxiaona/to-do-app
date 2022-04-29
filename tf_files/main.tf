@@ -20,16 +20,17 @@ provider "aws" {
   profile                  = "966185979698_Admin-Account-Access"
 }
 
-/*
+
 provider "kubernetes" {
   host                   = aws_eks_cluster.cluster.endpoint
   token                  = data.aws_eks_cluster_auth.cluster_auth.token
   cluster_ca_certificate = base64decode(aws_eks_cluster.cluster.certificate_authority.0.data)
-}*/
-
+}
+/*
 provider "kubernetes" {
   config_path = "~/.kube/config"
 }
+*/
 locals {
   cluster_name = "rock_in"
 }
