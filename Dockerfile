@@ -6,7 +6,7 @@ COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install
 COPY . .
-ENTRYPOINT yarn build
+RUN yarn build
 #CMD ["yarn", "start"]
 
 # run stage
