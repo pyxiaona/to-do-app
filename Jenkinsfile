@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE_NAME = "nananainfra1/kanban:v2"
+        DOCKER_IMAGE_NAME = "nananainfra1/kanban"
         DOCKER_USERNAME = "nananainfra1"
         DOCKER_PASSWORD = credentials('DOCKER_SECRET')
     }
