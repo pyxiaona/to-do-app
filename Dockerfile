@@ -11,7 +11,7 @@ ENTRYPOINT yarn build
 
 # run stage
 FROM nginx:1.21.6-alpine
-COPY --from=build /usr/app/build /usr/share/nginx/html
+COPY --from=build /usr/app/build/ /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
