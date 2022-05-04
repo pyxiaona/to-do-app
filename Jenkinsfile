@@ -41,7 +41,7 @@ pipeline {
                     echo "deploying the application ........"
                     docker rm -f kanban-app || true
                     cd tf_files
-                    terraform init
+                    terraform init -force-copy
                     terraform plan
                     terraform apply --auto-approve
                 '''
