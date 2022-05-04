@@ -1,4 +1,4 @@
-
+/*
 terraform {
   backend "s3" {
     bucket = "rock-infrared-2022-kanba-nm-br-ag"
@@ -6,7 +6,7 @@ terraform {
     region = "us-east-1"
   }
 }
-
+*/
 terraform {
   required_providers {
     aws = {
@@ -41,7 +41,7 @@ provider "kubernetes" {
 }
 */
 locals {
-  cluster_name = "rock_in"
+  cluster_name = "rock_infra_kanban"
 }
 
 

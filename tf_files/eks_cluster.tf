@@ -26,7 +26,7 @@ data "aws_subnets" "sub_ids" {
 }*/
 
 resource "aws_iam_role" "rock_role" {
-  name = "eks-cluster-role"
+  name = "eks-cluster-role-kanban-app"
 
   assume_role_policy = <<POLICY
 {

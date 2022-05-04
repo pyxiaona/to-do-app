@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg_cluster" {
-  name = "sg_cluster"
+  name = "sg_cluster-kanban-app"
   #vpc_id = aws_vpc.rock_vpc.id
   vpc_id = "vpc-0f82992e109fea8f9"
   dynamic "ingress" {
@@ -20,7 +20,7 @@ resource "aws_security_group" "sg_cluster" {
 }
 
 resource "aws_security_group" "sg_nodes" {
-  name = "sg_nodes"
+  name = "sg_nodes-kanban-app"
   #vpc_id = aws_vpc.rock_vpc.id
   vpc_id = "vpc-0f82992e109fea8f9"
   dynamic "ingress" {
