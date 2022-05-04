@@ -1,12 +1,13 @@
-/*
+
 terraform {
   backend "s3" {
     bucket = "rock-infrared-2022-kanba-nm-br-ag"
-    key="./tf_files/"
+    key="./tf_files/terraform.tfstate"
     region = "us-east-1"
+    profile= "966185979698_Admin-Account-Access"
   }
 }
-*/
+
 terraform {
   required_providers {
     aws = {
