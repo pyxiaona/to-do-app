@@ -42,7 +42,7 @@ provider "kubernetes" {
 }
 */
 locals {
-  cluster_name = "rock_infra_kanban"
+  cluster_name = "rock_infra_kb"
 }
 
 

@@ -22,7 +22,7 @@ resource "aws_eks_node_group" "rock_node_group" {
 }
 
 resource "aws_iam_role" "rock_node_role" {
-  name = "eks-node-group-role-kanban-app"
+  name = "eks-node-group-role-kanban"
 
   assume_role_policy = jsonencode({
     Statement = [{
